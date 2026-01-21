@@ -1,0 +1,11 @@
+/* subtle pulse when heartbeat is active */
+body.heartbeat-active {
+    animation: pulseBg 1.2s infinite ease-in-out;
+}
+
+@keyframes pulseBg {
+    0% { background-color: rgba(0,0,0,0); }
+    50% { background-color: rgba(0,0,0,0.03); }
+    100% { background-color: rgba(0,0,0,0); }
+}
+/* subtle pulse when heartbeat is active */
