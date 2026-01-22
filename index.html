@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>To Chayanika – A Heart Speaks</title>
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+        url("bg/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #f2f2f2;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 90px 22px;
+}
+
+h1 {
+    font-size: clamp(2.3rem, 6vw, 3.4rem);
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+p {
+    font-size: clamp(1rem, 3.8vw, 1.15rem);
+    line-height: 1.95;
+    margin-bottom: 28px;
+    color: #dddddd;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1.2s ease forwards;
+}
+
+p:nth-of-type(n) {
+    animation-delay: calc(0.4s + (var(--i) * 0.25s));
+}
+
+.bold {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+footer {
+    margin-top: 80px;
+    font-size: 1rem;
+    color: #aaaaaa;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 3.8s;
+}
+
+.typing {
+    border-right: 2px solid #f2f2f2;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3s steps(20, end) forwards, blink 0.7s infinite;
+}
+
+.easter-egg {
+    display: none;
+    margin-top: 40px;
+    font-size: 0.95rem;
+    color: #ffcc70;
+    text-align: center;
+}
+
+.hint {
+    margin-top: 50px;
+    font-size: 0.75rem;
+    text-align: center;
+    color: #777;
+}
+
+body.heartbeat-active {
+    animation: pulseBg 1.2s infinite ease-in-out;
+}
+
+@keyframes fadeIn { to { opacity: 1; } }
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+@keyframes typing { to { width: 100%; } }
+@keyframes blink { 50% { border-color: transparent; } }
+@keyframes pulseBg {
+    0% { background-color: rgba(0,0,0,0); }
+    50% { background-color: rgba(0,0,0,0.035); }
+    100% { background-color: rgba(0,0,0,0); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND MUSIC -->
+<audio id="bg-music" preload="auto" loop>
+    <source src="audio/bg-music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- HEARTBEAT -->
+<audio id="heartbeat" preload="auto" loop>
+    <source src="audio/heartbeat.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+    <h1 class="typing">To Chayanika – A Heart Speaks</h1>
+
+    <p style="--i:1">
+        Chayanika, I want to tell you something, not with grand gestures, not with arrogance, but with honesty.
+        I like to feel life, to savor it, to notice the small things—the laughter, the music, the movies that make time stop,
+        the flavors that linger on the tongue. Give me rosogolla melting on my tongue or a plate of kosha mangsho that warms the soul,
+        and I’m in my element. That’s who I am—someone who notices the sweetness, the spice, the little joys that make this world worth being in.
+    </p>
+
+    <p style="--i:2">
+        I wonder a lot about life. About the world, about people, about why things are the way they are.
+        Sometimes it feels messy, confusing, even unfair—but I try to understand it, to see the beauty within it.
+        And in all of this, I find meaning in little things, in moments that others might overlook.
+    </p>
+
+    <p style="--i:3">
+        And now, I want to let my heart speak in its truest form, through words that carry love and sincerity:
+    </p>
+
+    <p style="--i:4">
+        Priye likhkar niche likh du naam tumhara.<br/>
+        Kuch jagah bich ne khali rakh kar niche likh du sada tumhara.
+    </p>
+
+    <p style="--i:5">
+        Likha bich me kya yeh tumko padhna hai.<br/>
+        Kagaz par man ki bhasa ka arth smjhna hai.
+    </p>
+
+    <p style="--i:6">
+        Jo bhi arth nikaloge tum wo mujhko hai swikar.<br/>
+        Jhuke adhar jhuke nayan maun adhar ya kora kagaz arth sabhi ka pyar.
+    </p>
+
+    <p style="--i:7">
+        Priye likhkar niche likh du naam tumhara.<br/>
+        Kuch jagah bich ne khali rakh kar niche likh du sada tumhara.
+    </p>
+
+    <p style="--i:8">
+        Chayanika, you see, life is a little like rosogolla—soft, sweet, sometimes sticky—but always worth savoring.
+        And me? I guess I’m like kosha mangsho—a little spicy, full of flavor, and best enjoyed slowly,
+        with someone who knows how to appreciate it.
+    </p>
+
+    <p style="--i:9">
+        I leave space in my words for your thoughts, your interpretation, your presence.
+        Whatever meaning you take from it, I accept, because love isn’t about control—it’s about understanding,
+        about sharing, about being present with someone in their own way.
+    </p>
+
+    <footer>
+        Written with honesty and love. And SORRY for the cheesy food metaphors! ❤️ And the poem is not mine.
+        And part of this was written by ChatGPT.Sorry not sorry.
+    </footer>
+
+    <div class="easter-egg" id="egg">
+        .
+    </div>
+
+    <div class="hint">
+        (Tap once. Scroll slow. Or press <strong>W</strong>.)
+    </div>
+</div>
+
+<script>
+const heartbeat = document.getElementById("heartbeat");
+const bgMusic = document.getElementById("bg-music");
+
+let audioUnlocked = false;
+let lastScrollTop = 0;
+let lastTime = Date.now();
+
+// Unlock audio
+document.body.addEventListener("click", () => {
+    if (!audioUnlocked) {
+        heartbeat.volume = 0.18;
+        bgMusic.volume = 0.18;
+        heartbeat.play().catch(()=>{});
+        bgMusic.play().catch(()=>{});
+        audioUnlocked = true;
+        document.body.classList.add("heartbeat-active");
+    }
+}, { once: true });
+
+// Heartbeat sync with scroll
+window.addEventListener("scroll", () => {
+    if (!audioUnlocked) return;
+
+    const now = Date.now();
+    const scrollTop = window.scrollY;
+    const deltaScroll = Math.abs(scrollTop - lastScrollTop);
+    const deltaTime = now - lastTime || 1;
+
+    const speed = deltaScroll / deltaTime;
+    const rate = Math.min(1.6, Math.max(0.85, speed * 12));
+
+    heartbeat.playbackRate = rate;
+    heartbeat.volume = Math.min(0.6, 0.15 + speed * 2);
+
+    lastScrollTop = scrollTop;
+    lastTime = now;
+});
+
+// Calm heartbeat after scroll stops
+let scrollTimeout;
+window.addEventListener("scroll", () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+        if (audioUnlocked) {
+            heartbeat.playbackRate = 0.85;
+            heartbeat.volume = 0.15;
+        }
+    }, 250);
+});
+
+// Easter egg
+document.addEventListener("keydown", e => {
+    if (e.key.toLowerCase() === "w") {
+        document.getElementById("egg").style.display = "block";
+    }
+});
+
+// Mobile long‑press
+let pressTimer;
+document.body.addEventListener("touchstart", () => {
+    pressTimer = setTimeout(() => {
+        document.getElementById("egg").style.display = "block";
+    }, 800);
+});
+document.body.addEventListener("touchend", () => clearTimeout(pressTimer));
+</script>
+
+</body>
+</html>
